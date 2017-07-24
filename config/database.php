@@ -27,7 +27,8 @@ return [
     */
 
     //'default' => env('DB_CONNECTION', 'mysql'),
-       'default' => $db_config['connetion']
+
+     'default' => $db_config['connetion'],
     /*
     |--------------------------------------------------------------------------
     | Database Connections
@@ -69,7 +70,7 @@ return [
             'host'     => $db_config['host'],
             'database' => $db_config['database'],
             'username' => $db_config['username'],
-            'password' => $db_config['passwo'],
+            'password' => $db_config['password'],
             'charset'  => 'utf8',
             'prefix'   => '',
             'schema'   => 'public',
