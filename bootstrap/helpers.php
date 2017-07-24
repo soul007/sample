@@ -6,7 +6,7 @@ function get_db_config()
       $url = parse_url(getenv("DATABASE_URL"));
 
       return $db_config = [
-          'connetion' => 'pgsql',
+          'connection' => 'pgsql',
           'host' => $url["host"],
           'port' => $url['port'],
           'database'  => substr($url["path"], 1),
@@ -15,7 +15,7 @@ function get_db_config()
       ];
   } else {
       return $db_config = [
-          'connetion' => env('DB_CONNECTION', 'mysql'),
+          'connection' => env('DB_CONNECTION', 'mysql'),
           'host' => env('DB_HOST', 'localhost'),
           'database'  => env('DB_DATABASE', 'forge'),
           'username'  => env('DB_USERNAME', 'forge'),
