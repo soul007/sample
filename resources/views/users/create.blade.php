@@ -9,7 +9,7 @@
       </div>
       <div class="panel-body">
         @include('shared.errors')
-        
+
           <form action="{{route('users.store')}}" method="post">
               {{ csrf_field() }}
               <div class="form-group">
@@ -24,12 +24,12 @@
 
               <div class="form-group">
                 <labe for="password">密码：</label>
-                <input type="text" name="password" value="{{old('password')}}" class="form-control">
+                <input type="password" name="password" value="{{old('password')}}" class="form-control">
               </div>
 
               <div class="form-group">
                 <labe for="password-confirmation">确认密码：</label>
-                <input type="text" name="password-confirmation" value="{{old('password-confirmation')}}" class="form-control">
+                <input type="password" name="password-confirmation" value="{{old('password-confirmation')}}" class="form-control">
               </div>
 
               <button type="submit" class="btn btn-primary">注册</button>
