@@ -72,6 +72,7 @@ class UserController extends Controller
 
     public function destroy($id){
       $user = User::findOrFail($id);
+      $this->authorize('destroy',$user);
       $user->delete();
       session()->flash('success','成功删除用户!');
       return back();
