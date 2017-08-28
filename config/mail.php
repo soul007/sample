@@ -54,7 +54,7 @@ return [
     |
     */
 
-    'from' => ['address' => 'systeminfo@163.com', 'name' => 'li',
+    'from' => ['address' => 'soulever@163.com', 'name' => 'li'],
 
     /*
     |--------------------------------------------------------------------------

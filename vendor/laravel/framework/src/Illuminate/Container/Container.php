@@ -738,7 +738,7 @@ class Container implements ArrayAccess, ContainerContract
             return $concrete($this, $parameters);
         }
 
-        $reflector = new ReflectionClass($concrete);
+       $reflector = new ReflectionClass($concrete);
 
         // If the type is not instantiable, the developer is attempting to resolve
         // an abstract type such as an Interface of Abstract Class and there is
