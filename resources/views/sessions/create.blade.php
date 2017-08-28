@@ -1,5 +1,5 @@
-@extends('layouts.default');
-@section('title','登录');
+@extends('layouts.default')
+@section('title','登录')
 
 @section('content');
 <div class="col-md-offset-2 col-md-8">
@@ -19,13 +19,13 @@
         </div>
 
         <div class="form-group">
-          <label for="password">密码：</label>
+          <label for="password">密码(<a href = "{{route('password.reset')}}">忘记密码</a>)：</label>
           <input type="password" name="password" value="{{old('password')}}" class="form-control">
         </div>
         <div class="checkbox">
           <label><input type="checkbox" name="remember"> 记住我</label>
         </div>
-        
+
         <button type="submit" class="btn btn-primary">登录</button>
       </form>
       <hr>

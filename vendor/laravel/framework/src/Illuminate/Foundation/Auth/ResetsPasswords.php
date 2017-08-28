@@ -114,6 +114,6 @@ trait ResetsPasswords
 
         $user->save();
 
-        Auth::login($user);
+        //Auth::login($user);
     }
 }

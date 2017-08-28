@@ -12,8 +12,7 @@ class UserController extends Controller
 {
     public function __construct(){
       $this->middleware('auth',['only' => ['edit','update','destroy']]);
-
-      $this->middleware('guest', ['only' => ['create']]);
+      $this->middleware('guest', ['only' => ['create','confirmEmail']]);
     }
 
     public function index(){
@@ -96,7 +95,6 @@ class UserController extends Controller
 
     public function confirmEmail($token){
       $user = User::where('activation_token',$token)->firstOrFail();
-
       $user->activated = true;
       $user->activation_token = null;
       $user->save();
